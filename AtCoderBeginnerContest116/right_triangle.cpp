@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
-#include <map>
 
 using namespace std;
 
@@ -20,6 +19,9 @@ const ll LINF = 1e18;
 
 int main(int argc, char const *argv[])
 {
-    
+    int a, b, c;
+    cin >> a >> b;
+    c = a * b / 2;
+    cout << c << endl;
     return 0;
 }

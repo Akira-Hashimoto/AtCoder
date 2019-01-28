@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
-#include <map>
 
 using namespace std;
 
@@ -20,6 +19,29 @@ const ll LINF = 1e18;
 
 int main(int argc, char const *argv[])
 {
-    
+    int n;
+    vector<int> h;
+    cin >> n;
+    rep(i, n) {
+        int x;
+        cin >> x;
+        h.push_back(x);
+    }
+    int count = 0;
+    rep(i, h.size()) {
+        int a = h[i];
+        count += a;
+        rep(j, h.size()) {
+            if (a == 0) {
+                break;
+            } else if (a <= h[i + j]) {
+                h[i + j] -= a;
+            } else {
+                a = h[i + j];
+                h[i + j] = 0;
+            }
+        }
+    }
+    cout << count << endl;
     return 0;
 }

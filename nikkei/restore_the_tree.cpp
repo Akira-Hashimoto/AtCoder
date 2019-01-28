@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
-#include <map>
 
 using namespace std;
 
@@ -20,6 +19,12 @@ const ll LINF = 1e18;
 
 int main(int argc, char const *argv[])
 {
-    
+    int n, m;
+    cin >> n >> m;
+    int ab[n + m, 2];
+    int p[n+m];
+    rep(i, n + m) {
+        cin >> ab[i, 0] >> ab[i, 1];
+    }
     return 0;
 }
