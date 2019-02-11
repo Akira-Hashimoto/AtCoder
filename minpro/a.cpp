@@ -29,12 +29,12 @@ const double EPS = 1e-9;
 const ll LINF = 1e18;
 
 int printYes() {
-    cout << "Yes" << endl;
+    cout << "YES" << endl;
     return 0;
 }
 
 int printNo() {
-    cout << "No" << endl;
+    cout << "NO" << endl;
     return 0;
 }
 
@@ -57,6 +57,15 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int n,k;
+    cin >> n >> k;
+    if (n >= k * 2 - 1) {
+        printYes();
+    } else
+    {
+        printNo();
+    }
+    
+    
     return 0;
 }

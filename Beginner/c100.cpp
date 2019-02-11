@@ -57,6 +57,23 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int n;
+    cin >> n;
+    vector<int> x(n);
+    rep(i,n) {
+        cin >> x[i];
+    }
+    long count = 0;
+    rep(i,n) {
+        if (x[i] == 1) {
+            break;
+        }
+        
+        while(x[i] % 2 == 0){
+            x[i] /= 2;
+            count++;
+        }
+    }
+    cout << count << endl;
     return 0;
 }

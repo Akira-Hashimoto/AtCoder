@@ -20,8 +20,7 @@ typedef long long ll;
 #define Y second
 #define vi vector<int>
 #define vl vector<ll>
-#define vvi vector<vector<int> >
-#define vpl vector<pair<long, long> >
+#define vii vector<vector<int> >
 
 const int INF = 100100100;
 const int MOD = (int)1e9 + 7;
@@ -57,6 +56,23 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    string S;
+    long long int K;
+    cin >> S >> K;
+    const char* cstr = S.c_str();
+    int a = 0;
+    rep(i, 100){
+        if(cstr[i] == '1') {
+            continue;
+        } else {
+            a = i;
+            break;
+        }
+    }
+    if(a + 1> K) {
+        cout << 1;
+    } else {
+        cout << cstr[a];
+    }
     return 0;
 }

@@ -17,30 +17,29 @@ const int INF = 100100100;
 const int MOD = (int)1e9 + 7;
 const double EPS = 1e-9;
 const ll LINF = 1e18;
-#include <stdio.h>
+
+int printOut(){
+        cout << -1 << " " << -1 << " " << -1 << endl;
+        return 0;
+}
 
 int main(int argc, char const *argv[])
 {
-    int n;
-    cin >> n;
-    long ans = 0;
-    vector<pair<ll, pair<int, int> > > h;
-    rep(i, n) {
-        int a,b;
-        cin >> a >> b;
-        h.push_back(make_pair(a + b, make_pair(a,b)));
-    }
-
-    sort(ALL(h));
-    reverse(ALL(h));
-
-    rep(i, h.size()) {
-        if (i % 2 == 0) {
-            ans += h[i].second.first;
-        } else {
-            ans -= h[i].second.second;
+    int n, y;
+    cin >> n >> y;
+    y = y / 1000;
+    rep(i, n + 1) {
+        if ((y - n - 9 * i) % 4 == 0) {
+            int yy = (y - n - 9 * i) / 4;
+            int z = n - i - yy;
+            if (yy < 0 || z < 0) {
+                continue;
+            }
+            cout << i << " " << yy << " " << z << endl;
+            return 0;
         }
     }
-    cout << ans << endl;
+    printOut();
+    
     return 0;
 }

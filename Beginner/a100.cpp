@@ -57,6 +57,15 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int a,b;
+    cin >> a >> b;
+    if (a > 8 || b >8) {
+        cout << ":(" << endl;
+    } else
+    {
+        cout << "Yay!";
+    }
+    
+    
     return 0;
 }

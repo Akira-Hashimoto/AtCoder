@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -57,6 +58,32 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    long d,n;
+    cin >> d >> n;
+    if (d==0) {
+        cout << n << endl;
+    } else if (d==1)
+    {
+        if (n == 100) {
+            cout << 10100 << endl;
+        } else
+        {
+            cout << 100 * n;
+        }
+        
+        
+    } else
+    {if (n == 100) {
+        cout << 10100 * n;
+    } else
+    {
+        cout << 10000 * n;
+    }
+    
+    
+    }
+    
+    
+    
     return 0;
 }

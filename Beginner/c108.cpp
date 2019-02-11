@@ -20,8 +20,7 @@ typedef long long ll;
 #define Y second
 #define vi vector<int>
 #define vl vector<ll>
-#define vvi vector<vector<int> >
-#define vpl vector<pair<long, long> >
+#define vii vector<vector<int> >
 
 const int INF = 100100100;
 const int MOD = (int)1e9 + 7;
@@ -57,6 +56,18 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    long N,K;
+    cin >> N >> K;
+    long ans = 0;
+    long w = (N - N % K) / K;
+    ans += w + w * (w - 1) *3 + w * (w-1) * (w-2);
+    if (K % 2 == 0) {
+        long hK = K/2;
+        long x = (N - N % hK) / hK;
+        x = (x + x % 2) / 2;
+        ans += x + x * (x - 1) * 3 + x * (x-1) * (x-2);
+    }
+    
+    cout << ans;
     return 0;
 }

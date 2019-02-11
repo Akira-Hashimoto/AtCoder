@@ -20,8 +20,7 @@ typedef long long ll;
 #define Y second
 #define vi vector<int>
 #define vl vector<ll>
-#define vvi vector<vector<int> >
-#define vpl vector<pair<long, long> >
+#define vii vector<vector<int> >
 
 const int INF = 100100100;
 const int MOD = (int)1e9 + 7;
@@ -57,6 +56,29 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int N;
+    cin >> N;
+    if (N < 105) {
+        cout << 0;
+        return 0;
+    } else if (N<135)
+    {
+        cout << 1;
+        return 0;
+    } else if (N < 165) {
+        cout << 2;
+        return 0;
+    } else if (N<189) {
+        cout << 3;
+    }else if (N<195) {
+        cout << 4;
+    } else
+    
+    {
+        cout <<5;
+        return 0;
+    }
+    
+    
     return 0;
 }

@@ -29,12 +29,12 @@ const double EPS = 1e-9;
 const ll LINF = 1e18;
 
 int printYes() {
-    cout << "Yes" << endl;
+    cout << "YES" << endl;
     return 0;
 }
 
 int printNo() {
-    cout << "No" << endl;
+    cout << "NO" << endl;
     return 0;
 }
 
@@ -57,6 +57,38 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int l;
+    cin >>l;
+    int a[l];
+    int t,z = 0;
+    vpl v;
+    ll min = INF;
+    rep(i,l) {
+        cin >> a[i];
+        if (a[i] == 0) {
+            z++;
+        } else
+        {
+            if (z != 0) {
+                v.push_back({t,z});
+                t = 0;
+                z = 0;
+            }
+            t += a[i];
+        }
+    }
+    ll even = 0, odd = 0;
+    rep(i, l){
+        if () {
+            /* code */
+        }
+        
+    }
+    rep(i,l) {
+        if (/* condition */) {
+            /* code */
+        }
+        
+    }
     return 0;
 }

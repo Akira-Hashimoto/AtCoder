@@ -57,6 +57,18 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    ll k,a,b,max = 1;
+    cin >> k >> a >> b;
+    while(k != 0){
+        if (k == 1 || max < a || b-a < 2) {
+            k--;
+            max++;
+        } else 
+        {
+            k -= 2;
+            max += b-a;
+        }
+    }
+    cout << max;
     return 0;
 }

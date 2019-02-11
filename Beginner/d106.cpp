@@ -16,6 +16,8 @@ typedef long long ll;
 #define rrrep(i,a,b) for(long i=(a);i>=(b);i--)
 #define define pb push_back
 #define ALL(obj) (obj).begin(), (obj).end()
+#define ALLG(obj) (obj).begin(), (obj).end(), greater<long>()
+#define ALLGP(obj) (obj).begin(), (obj).end(), greater<pair<long, long> >()
 #define X first
 #define Y second
 #define vi vector<int>
@@ -57,6 +59,30 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int N,M,Q;
+    cin >> N >> M >> Q;
+    vpl vm(M), vq(Q);
+    rep(i,M){
+        cin >> vm[i].X >> vm[i].Y;
+    }
+    rep(i,Q){
+        cin >> vq[i].X >> vq[i].Y;
+    }
+    int pattern[N][N];
+    rep(i,N) {
+        rrrep(j,N,i){
+            pattern[i][j] = 0;
+        }
+    }
+    rep(m,M) {
+        rep(x, vm[m].X) {
+            rrrep(y, N - 1, vm[m].Y-1) {
+                pattern[x][y]++;
+            }
+        }
+    }
+    rep(q, Q){
+        cout << pattern[vq[q].X - 1][vq[q].Y - 1] << endl;
+    }
     return 0;
 }

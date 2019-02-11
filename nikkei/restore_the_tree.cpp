@@ -21,10 +21,30 @@ int main(int argc, char const *argv[])
 {
     int n, m;
     cin >> n >> m;
-    int ab[n + m, 2];
-    int p[n+m];
+    int tree[n];
+    vector<pair<int, int>> vec;
+    rep(i, n) {
+        tree[i] = 0;
+    }
     rep(i, n + m) {
-        cin >> ab[i, 0] >> ab[i, 1];
+        int a,b;
+        cin >> a >> b;
+        vec.push_back(make_pair(a,b));
+        tree[b] = -1;
+    }
+    int start;
+    rep(i, n) {
+        if (tree[i] == 0) {
+            start = i;
+            break;
+        }
+    }
+    rep(i, n + m) {
+        while(1){
+            findCount(n + m, tree)
+        }
+        
+        
     }
     return 0;
 }

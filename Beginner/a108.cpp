@@ -12,7 +12,6 @@ typedef long long ll;
 #define rep(i, n) for(long (i) = 0; (i) < (long) (n); (i)++)
 #define rep1(i,n) for(int i=1;i<=(n);i++)
 #define rrep(i,a,b) for(long i=(a);i<(b);i++)
-#define rrep1(i,a,b) for(long i=(a);i<=(b);i++)
 #define rrrep(i,a,b) for(long i=(a);i>=(b);i--)
 #define define pb push_back
 #define ALL(obj) (obj).begin(), (obj).end()
@@ -20,8 +19,7 @@ typedef long long ll;
 #define Y second
 #define vi vector<int>
 #define vl vector<ll>
-#define vvi vector<vector<int> >
-#define vpl vector<pair<long, long> >
+#define vii vector<vector<int> >
 
 const int INF = 100100100;
 const int MOD = (int)1e9 + 7;
@@ -57,6 +55,10 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int K, a, b;
+    cin >> K;
+    a = (K + K % 2) / 2;
+    b = (K - K % 2) / 2;
+    cout << a * b;
     return 0;
 }

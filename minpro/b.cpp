@@ -57,6 +57,22 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int a[4];
+    rep(i,4) {
+        a[i] = 0;
+    }
+    rep(i, 6) {
+        int b;
+        cin >> b;
+        a[b - 1]++;
+    }
+    if (a[0]!=0 && a[0]!=3 && a[1]!=0 && a[1]!=3 && a[2]!=0 && a[2]!=3 && a[3]!=0 && a[3]!=3) {
+        cout << "YES";
+    } else 
+    {
+        cout << "NO";
+    }
+    
+    
     return 0;
 }

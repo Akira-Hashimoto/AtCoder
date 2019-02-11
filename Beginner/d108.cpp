@@ -20,8 +20,7 @@ typedef long long ll;
 #define Y second
 #define vi vector<int>
 #define vl vector<ll>
-#define vvi vector<vector<int> >
-#define vpl vector<pair<long, long> >
+#define vii vector<vector<int> >
 
 const int INF = 100100100;
 const int MOD = (int)1e9 + 7;
@@ -57,6 +56,32 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int L,N = 0,M = 0;
+    cin >> L;
+    int x = 0;
+    int y = 1;
+    while(y < L){
+        y *= 2;
+        x++;
+    }
+    N = x;
+    M = x * 2;
+    cout << x << endl;
+    L -= pow(2, x-1);
+    int path[20, 2];
+    rep(i, 20) {
+        path[i, 0] = 0;
+    }
+    rrrep(i, x, 1) {
+        if (L >= pow(2, i) - 1) {
+            path[i ,0] = i;
+            path[i, 1] = pow(2, i - 1);
+        }
+    }
+    cout << N << " " << M << endl;
+    rrrep(i,x,1) {
+        cout << i << " " << i+1 << " " << 0 << endl;
+        cout << i << " " << i+1 << " " << pow(2, i-1) << endl;
+    }
     return 0;
 }
