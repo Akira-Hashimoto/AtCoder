@@ -25,7 +25,6 @@ typedef long long ll;
 #define vppl vector<pair<long, pair<long, long> > >
 
 const int INF = 100100100;
-const long LONG_INF = 2147483647;
 const int MOD = (int)1e9 + 7;
 const double EPS = 1e-9;
 const ll LINF = 1e18;
@@ -42,6 +41,28 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int N;
+    cin >> N;
+    int ans = N;
+    int x = N / 9;
+    rep(i, x+1){
+        int total = 0;
+        int x = i;
+        int y = (N - i * 9) / 6;
+        int z = (N - i * 9) % 6;
+        while(x != 0){
+            total += x % 9;
+            x /= 9;
+        }
+        while(y != 0){
+            total += y % 6;
+            y /= 6;
+        }
+        total += z;
+        if (total < ans) {
+            ans = total;
+        }
+    }
+    cout << ans << endl;
     return 0;
 }

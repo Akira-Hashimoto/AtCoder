@@ -25,10 +25,26 @@ typedef long long ll;
 #define vppl vector<pair<long, pair<long, long> > >
 
 const int INF = 100100100;
-const long LONG_INF = 2147483647;
 const int MOD = (int)1e9 + 7;
 const double EPS = 1e-9;
 const ll LINF = 1e18;
+
+int printYes() {
+    cout << "Yes" << endl;
+    return 0;
+}
+
+int printNo() {
+    cout << "No" << endl;
+    return 0;
+}
+
+int ans;
+
+int printAns() {
+    cout << ans << endl;
+    return 0;
+}
 
 
 int pow(int x) {
@@ -42,6 +58,13 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+    int c;
+    cin >> c;
+    if (c >= 1000) {
+        cout << "ABD";
+    } else
+    {
+        cout << "ABC";
+    }
     return 0;
 }
