@@ -42,6 +42,24 @@ int pow(int x) {
 
 int main(int argc, char const *argv[])
 {
-
+	cin.tie(0);
+	ios::sync_with_stdio(false);
+    int a,n;
+    cin >> n;
+    cin >> a;
+    n--;
+    while (n!=0)
+    {
+        n--;
+        int b;
+        cin >> b;
+        if(a+1<=b) a=b-1;
+        else if(a==b);
+        else {
+            cout << "No" << endl;
+            return 0;
+        }
+    }
+    cout << "Yes" << endl;
     return 0;
 }
